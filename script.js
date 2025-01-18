@@ -17,8 +17,17 @@ function active(){
 }
 function active_2(){
     if(pass2 !== ""){
-
-    }else{
-        
+     showBtn.style.display="block";
+     showBtn.onclick=function(){
+        if((pass1.type==="password") && (pass2.type="password")){
+            showBtn.innerHTML="مخفی";
+            pass1.type="text";
+            pass2.type="text";
+        }else{
+            showBtn.innerHTML="نمایش";
+            pass1.type="password";
+            pass2.type="password";
+        }
+     }
     }
 }
