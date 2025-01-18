@@ -15,3 +15,10 @@ function active(){
         button.classList.remove('active');
     }
 }
+function active_2(){
+    if(pass2 !== ""){
+
+    }else{
+        
+    }
+}
