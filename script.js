@@ -5,7 +5,7 @@ let showBtn=document.querySelector('.show');
 let errorText=document.querySelector('.error-text');
 
 function active(){
-    if(pass1.value.length>=6){
+    if(pass1.value.length>=5){
         button.removeAttribute('disabled','');
         pass2.removeAttribute('disabled','');
         button.classList.add('active');
@@ -30,4 +30,21 @@ function active_2(){
         }
      }
     }
+}
+
+button.onclick=function(){
+    event.preventDefault();
+    if(pass1.value !== pass2.value){
+        errorText.style.display="block";
+        errorText.textContent="متاسفانه رمز عبور با تکرار آن یکی نیست";
+        errorText.style.background=" #f8d7da"
+        errorText.style.color="red";
+
+    }else{
+        errorText.style.display="block";
+        errorText.textContent="تبریک رمز عبور با تکرار آن برابر است";
+        errorText.style.background=" green"
+        errorText.style.color="white";
+    }
+  
 }
